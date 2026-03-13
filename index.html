@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coinbase Brazil × Alkimi — Campaign Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --alkimi-black:        #0A0A0F;
+  --alkimi-white:        #FFFFFF;
+  --alkimi-grey-light:   #C8C8D0;
+  --alkimi-grey-mid:     #7A7A85;
+  --alkimi-grey-dark:    #2A2A35;
+  --alkimi-purple:       #5C26FF;
+  --alkimi-purple-dark:  #4A1ECC;
+  --alkimi-purple-light: #8A5CFF;
+  --alkimi-green:        #00E87B;
+  --alkimi-green-dark:   #00B862;
+  --alkimi-green-light:  #4ADE80;
+  --surface-1: #121218;
+  --surface-2: #1A1A22;
+  --surface-3: #2A2A35;
+  --color-border:       rgba(255,255,255,0.08);
+  --color-border-hover: rgba(255,255,255,0.15);
+  --purple-glow-subtle: rgba(92,38,255,0.08);
+  --purple-glow-medium: rgba(92,38,255,0.15);
+  --purple-glow-strong: rgba(92,38,255,0.25);
+  --green-glow-subtle:  rgba(0,232,123,0.08);
+  --font-title:   'Unbounded', system-ui, sans-serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body:    'Poppins', system-ui, sans-serif;
+  --text-overline: 0.6875rem;
+  --text-caption:  0.75rem;
+  --text-body-sm:  0.875rem;
+  --text-micro:    0.625rem;
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
+  --space-6:24px; --space-8:32px; --space-10:40px; --space-12:48px;
+  --space-16:64px; --space-20:80px;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:16px; --radius-xl:24px; --radius-full:9999px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);font-size:1rem;font-weight:400;line-height:1.6;
+  background:var(--alkimi-black);color:var(--alkimi-white);
+  -webkit-font-smoothing:antialiased;min-height:100vh;
+}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500;line-height:1.2;letter-spacing:-0.01em;margin-top:0;}
+.overline{font-family:var(--font-body);font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-purple);}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:var(--space-4) var(--space-8);background:rgba(10,10,15,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--color-border);position:sticky;top:0;z-index:100;}
+.navbar-logo svg{height:22px;width:auto;}
+.navbar-right{display:flex;align-items:center;gap:var(--space-6);}
+.partner-badge{font-family:var(--font-body);font-size:var(--text-body-sm);font-weight:600;color:var(--alkimi-grey-light);}
+.partner-sep{font-size:16px;color:var(--alkimi-grey-dark);}
+.navbar-deck-link{font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-purple);padding:5px 14px;background:var(--purple-glow-subtle);border:1px solid rgba(92,38,255,0.25);border-radius:var(--radius-full);text-decoration:none;transition:background 0.2s,border-color 0.2s;white-space:nowrap;}.navbar-deck-link:hover{background:var(--purple-glow-medium);border-color:rgba(92,38,255,0.5);}
+.hero{position:relative;padding:var(--space-16) var(--space-8) var(--space-12);overflow:hidden;border-bottom:1px solid var(--color-border);}
+.hero::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(92,38,255,0.13) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{position:relative;max-width:1200px;margin:0 auto;}
+.hero-overline{margin-bottom:var(--space-4);}
+.hero h1{font-family:var(--font-title);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300;letter-spacing:-0.03em;text-transform:uppercase;line-height:1.1;max-width:680px;margin-bottom:var(--space-3);}
+.gradient-text{background:linear-gradient(90deg,#5C26FF,#00E87B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:var(--text-body-sm);color:var(--alkimi-grey-light);max-width:500px;margin-top:var(--space-3);}
+.main-content{max-width:1280px;margin:0 auto;padding:var(--space-12) var(--space-8) var(--space-20);}
+.budget-panel{background:var(--surface-1);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);margin-bottom:var(--space-10);position:relative;overflow:hidden;}
+.budget-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--alkimi-purple),transparent);opacity:0.6;}
+.budget-panel-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:var(--space-8);align-items:end;}
+.budget-label{font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-grey-mid);margin-bottom:var(--space-4);}
+.budget-input-group{display:flex;align-items:center;gap:var(--space-2);background:var(--alkimi-black);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-2) var(--space-4);transition:border-color 0.2s,box-shadow 0.2s;}
+.budget-input-group:focus-within{border-color:var(--alkimi-purple);box-shadow:0 0 0 3px var(--purple-glow-subtle);}
+.budget-symbol{font-family:var(--font-title);font-size:1.4rem;font-weight:400;color:var(--alkimi-purple);flex-shrink:0;line-height:1;}
+#budgetInput{background:transparent;border:none;outline:none;font-family:var(--font-title);font-size:1.9rem;font-weight:400;color:var(--alkimi-white);width:100%;padding:var(--space-2) 0;letter-spacing:-0.02em;text-transform:uppercase;}
+#budgetInput::-webkit-inner-spin-button,#budgetInput::-webkit-outer-spin-button{-webkit-appearance:none;}
+.slider-row{margin-top:var(--space-4);display:flex;align-items:center;gap:var(--space-4);}
+.slider-val{font-size:var(--text-caption);color:var(--alkimi-grey-mid);white-space:nowrap;min-width:40px;}
+.slider-val.right{text-align:right;}
+input[type=range]{-webkit-appearance:none;flex:1;height:3px;background:var(--surface-3);border-radius:2px;outline:none;cursor:pointer;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--alkimi-purple);border:2px solid var(--alkimi-black);box-shadow:0 0 0 1px var(--alkimi-purple),0 0 12px var(--purple-glow-medium);transition:transform 0.15s,box-shadow 0.15s;cursor:pointer;}
+input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2);box-shadow:0 0 0 1px var(--alkimi-purple),0 0 20px var(--purple-glow-strong);}
+.stat-card{background:rgba(255,255,255,0.03);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-2);}
+.stat-label{font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-grey-mid);}
+.stat-value{font-family:var(--font-title);font-size:1.65rem;font-weight:500;color:var(--alkimi-white);letter-spacing:-0.02em;text-transform:uppercase;line-height:1;}
+.stat-value.purple{color:var(--alkimi-purple-light);}
+.stat-value.green{color:var(--alkimi-green);}
+.stat-sub{font-size:var(--text-caption);color:var(--alkimi-grey-mid);margin-top:var(--space-1);}
+.section-head{display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-6);}
+.section-head .overline{flex-shrink:0;}
+.section-rule{flex:1;height:1px;background:var(--color-border);}
+.table-wrap{background:var(--surface-1);border:1px solid var(--color-border);border-radius:var(--radius-xl);overflow-x:auto;overflow-y:hidden;margin-bottom:var(--space-10);}
+table{width:100%;border-collapse:collapse;min-width:960px;}
+thead th{font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-grey-mid);padding:var(--space-4) var(--space-6);text-align:right;background:var(--alkimi-black);border-bottom:1px solid var(--color-border);white-space:nowrap;}
+thead th:first-child,thead th:nth-child(2),thead th:nth-child(3){text-align:left;}
+tbody tr{border-bottom:1px solid var(--color-border);transition:background 0.15s;}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:hover{background:var(--purple-glow-subtle);}
+tbody td{padding:14px var(--space-6);font-size:var(--text-body-sm);color:var(--alkimi-white);text-align:right;white-space:nowrap;}
+tbody td:first-child,tbody td:nth-child(2){text-align:left;}
+tbody td:nth-child(3){text-align:left;color:var(--alkimi-grey-light);font-size:var(--text-caption);}
+.tag{font-size:var(--text-micro);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:3px 10px;border-radius:var(--radius-full);display:inline-flex;align-items:center;}
+.tag--ctv{background:rgba(92,38,255,0.15);color:var(--alkimi-purple-light);border:1px solid rgba(92,38,255,0.3);}
+.tag--tradfi{background:rgba(92,38,255,0.08);color:#a78bfa;border:1px solid rgba(92,38,255,0.15);}
+.tag--crypto{background:rgba(0,232,123,0.10);color:var(--alkimi-green);border:1px solid rgba(0,232,123,0.2);}
+.tag--display{background:rgba(0,232,123,0.10);color:var(--alkimi-green);border:1px solid rgba(0,232,123,0.2);}
+.tag--video{background:rgba(92,38,255,0.15);color:var(--alkimi-purple-light);border:1px solid rgba(92,38,255,0.3);}
+.tag--av{background:rgba(0,232,123,0.08);color:var(--alkimi-green);border:1px solid rgba(0,232,123,0.15);}
+.row-geo-sep{background:transparent!important;border-bottom:none!important;}
+.row-geo-sep:hover{background:transparent!important;}
+.row-geo-sep td{padding:var(--space-6) var(--space-6) var(--space-2);font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-grey-mid);}
+.sitelist-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;background:var(--surface-1);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-6);cursor:pointer;transition:border-color 0.2s,background 0.2s;margin-bottom:var(--space-4);}
+.sitelist-toggle:hover{border-color:var(--alkimi-purple);background:var(--purple-glow-subtle);}
+.sitelist-toggle-left{display:flex;align-items:center;gap:var(--space-3);}
+.sitelist-toggle-icon{width:32px;height:32px;border-radius:var(--radius-sm);background:var(--purple-glow-subtle);border:1px solid rgba(92,38,255,0.25);display:flex;align-items:center;justify-content:center;color:var(--alkimi-purple);font-size:14px;flex-shrink:0;}
+.sitelist-toggle-label{font-size:var(--text-body-sm);font-weight:600;color:var(--alkimi-white);}
+.sitelist-toggle-sub{font-size:var(--text-caption);color:var(--alkimi-grey-mid);margin-top:2px;}
+.sitelist-chevron{color:var(--alkimi-grey-mid);font-size:12px;transition:transform 0.25s ease;flex-shrink:0;}
+.sitelist-chevron.open{transform:rotate(180deg);}
+.sitelist-body{display:none;background:var(--surface-1);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-8);margin-bottom:var(--space-10);}
+.sitelist-body.open{display:block;animation:fadeUp 0.3s ease both;}
+.sitelist-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-6);}
+.sitelist-col h5{font-family:var(--font-body);font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-purple);margin-bottom:var(--space-4);padding-bottom:var(--space-3);border-bottom:1px solid var(--color-border);}
+.sitelist-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+.sitelist-col ul li{font-size:var(--text-caption);color:var(--alkimi-grey-light);padding:3px 0;border-bottom:1px solid rgba(255,255,255,0.03);}
+.sitelist-col ul li:last-child{border-bottom:none;}
+@media(max-width:1024px){.sitelist-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.sitelist-grid{grid-template-columns:1fr;}}
+.av-items{display:flex;flex-direction:column;gap:10px;}
+.av-item{display:flex;align-items:flex-start;gap:12px;}
+.av-item-dot{width:6px;height:6px;border-radius:50%;background:var(--alkimi-green);flex-shrink:0;margin-top:5px;}
+.av-item-title{display:block;font-size:var(--text-body-sm);font-weight:600;color:var(--alkimi-green);}
+.av-item-desc{display:block;font-size:var(--text-caption);color:var(--alkimi-grey-light);margin-top:1px;}
+.row-av-sub{background:rgba(0,232,123,0.07)!important;border-top:1px solid rgba(0,232,123,0.25)!important;border-bottom:1px solid rgba(0,232,123,0.15)!important;}
+.row-av-sub:hover{background:rgba(0,232,123,0.09)!important;}
+.row-av-sub td{padding:10px var(--space-6) 10px calc(var(--space-6) + 12px);font-family:var(--font-body);font-size:var(--text-caption);font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--alkimi-green) !important;opacity:1 !important;}
+.row-av-sub td::before{content:'↳ ';color:var(--alkimi-green);opacity:0.6;font-weight:400;}
+.row-av td{opacity:0.9;}
+.av-note{font-size:var(--text-micro);color:var(--alkimi-green);opacity:0.65;font-style:italic;}
+.av-comp{color:var(--alkimi-green);font-size:var(--text-micro);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;}
+.av-dash{color:var(--surface-3);}
+tfoot tr{background:var(--alkimi-black);border-top:1px solid rgba(92,38,255,0.2);}
+tfoot td{padding:var(--space-6);font-size:var(--text-body-sm);font-weight:500;color:var(--alkimi-white);text-align:right;white-space:nowrap;}
+tfoot td:first-child,tfoot td:nth-child(2){text-align:left;}
+.foot-label{font-family:var(--font-title);font-size:var(--text-caption);font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--alkimi-grey-mid);}
+.foot-imp{color:var(--alkimi-white);font-weight:600;}
+.foot-cost{color:var(--alkimi-purple-light);font-family:var(--font-title);font-weight:600;font-size:var(--text-caption);letter-spacing:-0.01em;text-transform:uppercase;}
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-bottom:var(--space-10);}
+.sum-card{background:var(--surface-1);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);position:relative;overflow:hidden;transition:border-color 0.2s;}
+.sum-card:hover{border-color:var(--color-border-hover);}
+.sum-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;}
+.sum-card.pa::after{background:linear-gradient(90deg,var(--alkimi-purple),transparent);}
+.sum-card.ga::after{background:linear-gradient(90deg,var(--alkimi-green),transparent);}
+.sum-label{font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-grey-mid);margin-bottom:var(--space-3);}
+.sum-val{font-family:var(--font-title);font-size:1.4rem;font-weight:500;color:var(--alkimi-white);letter-spacing:-0.02em;text-transform:uppercase;line-height:1;margin-bottom:var(--space-2);}
+.sum-val.purple{color:var(--alkimi-purple-light);}
+.sum-val.green{color:var(--alkimi-green);}
+.sum-sub{font-size:var(--text-caption);color:var(--alkimi-grey-mid);}
+.geo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);margin-bottom:var(--space-10);}
+.geo-card{background:var(--surface-1);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);transition:border-color 0.2s,box-shadow 0.2s;}
+.geo-card:hover{border-color:var(--color-border-hover);box-shadow:0 8px 32px rgba(0,0,0,0.3);}
+.geo-card-head{display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-6);padding-bottom:var(--space-4);border-bottom:1px solid var(--color-border);}
+.geo-flag{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.geo-card-head h3{font-family:var(--font-title);font-size:var(--text-caption);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin:0;}
+.geo-pct{margin-left:auto;font-size:var(--text-overline);font-weight:600;color:var(--alkimi-grey-mid);letter-spacing:0.06em;}
+.geo-row{display:flex;justify-content:space-between;align-items:center;padding:var(--space-2) 0;}
+.geo-row-label{font-size:var(--text-caption);color:var(--alkimi-grey-mid);}
+.geo-row-val{font-size:var(--text-caption);font-weight:600;color:var(--alkimi-white);}
+.av-callout{background:var(--green-glow-subtle);border:1px solid rgba(0,232,123,0.18);border-radius:var(--radius-lg);padding:var(--space-6) var(--space-8);display:flex;align-items:flex-start;gap:var(--space-6);margin-bottom:var(--space-10);}
+.av-icon{width:38px;height:38px;border-radius:var(--radius-md);background:rgba(0,232,123,0.10);border:1px solid rgba(0,232,123,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--alkimi-green);font-size:16px;}
+.av-callout h4{font-size:var(--text-body-sm);font-weight:600;color:var(--alkimi-green);margin-bottom:var(--space-2);}
+.av-callout p{font-size:var(--text-caption);color:var(--alkimi-grey-light);line-height:1.7;max-width:720px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes nf{0%{opacity:0.2;}100%{opacity:1;}}
+.hero-inner{animation:fadeUp 0.5s ease both;}
+.budget-panel{animation:fadeUp 0.5s ease 0.1s both;}
+.table-wrap{animation:fadeUp 0.5s ease 0.2s both;}
+.summary-grid{animation:fadeUp 0.5s ease 0.25s both;}
+.geo-grid{animation:fadeUp 0.5s ease 0.3s both;}
+.av-callout{animation:fadeUp 0.5s ease 0.35s both;}
+.flash{animation:nf 0.3s ease both;}
+@media(max-width:1024px){.main-content{padding:var(--space-8) var(--space-6) var(--space-16);}.hero{padding:var(--space-12) var(--space-6) var(--space-8);}.navbar{padding:var(--space-4) var(--space-6);}.budget-panel-grid{grid-template-columns:1fr 1fr;}.summary-grid{grid-template-columns:repeat(2,1fr);}.geo-grid{grid-template-columns:1fr;}}
+@media(max-width:640px){.budget-panel-grid{grid-template-columns:1fr;}.summary-grid{grid-template-columns:repeat(2,1fr);}.navbar-deck-link{display:none;}.hero h1{font-size:1.6rem;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <svg viewBox="68 46 216 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M83.8615 58.6759C78.5907 58.5085 73.4034 59.9878 69.0608 62.8966L72.2676 68.7C75.3341 66.4522 79.084 65.2623 82.9241 65.3187C88.7704 65.3187 91.6565 68.0525 91.6565 72.7289V73.2325H82.5787C71.9222 73.2325 68 77.693 68 83.4005C68 89.1081 73.057 93.6166 81.074 93.6166C86.3283 93.6166 90.1518 91.9618 92.1005 89.0121V93.1609H99.8462V73.0646C99.8462 63.2323 93.9999 58.6759 83.8861 58.6759H83.8615ZM91.6319 82.5132C90.9055 84.187 89.6588 85.5979 88.0663 86.5483C86.4738 87.4987 84.6154 87.9409 82.7514 87.8131C78.5332 87.8131 76.0417 85.9665 76.0417 83.0168C76.0417 80.6187 77.5465 78.4844 83.1461 78.4844H91.6319V82.4413V82.5132Z" fill="#FFFFFF"/>
+      <path d="M113.711 46H105.497V93.4109H113.711V46Z" fill="#FFFFFF"/>
+      <path d="M145.855 93.7292H155.845L139.811 73.9447L154.464 59.6278H144.597L127.576 74.9519V46H119.361V93.7292H127.576V84.7362L133.693 79.1006L145.855 93.7292Z" fill="#FFFFFF"/>
+      <path d="M167.592 59.3477H159.378V93.473H167.592V59.3477Z" fill="#FFFFFF"/>
+      <path d="M218.253 59.034C215.761 58.9459 213.281 59.412 211.002 60.397C208.724 61.382 206.707 62.8597 205.105 64.7176C203.822 62.8392 202.051 61.324 199.972 60.3258C197.892 59.3277 195.578 58.8819 193.264 59.034C191.102 58.9506 188.947 59.3381 186.958 60.1679C184.97 60.9977 183.197 62.2489 181.769 63.8302V59.4896H173.949V93.591H182.164V76.2765C182.164 69.5138 185.839 66.0605 191.291 66.0605C196.224 66.0605 199.184 69.0102 199.184 75.0774V93.591H207.399V76.2765C207.399 69.5138 211.148 66.0605 216.526 66.0605C221.46 66.0605 224.42 69.0102 224.42 75.0774V93.591H232.634V74.0463C232.634 63.7583 226.714 59.1059 218.253 59.1059" fill="#FFFFFF"/>
+      <path d="M246.093 85.2653V67.2933C246.093 62.7562 242.415 59.0781 237.877 59.0781V93.4804C242.415 93.4804 246.093 89.8024 246.093 85.2653Z" fill="#FFFFFF"/>
+      <path d="M262.163 59.0781C260.952 59.0781 261.062 60.3218 261.503 60.7674C261.985 61.1977 263.589 62.8645 263.589 62.8645L263.589 67.5642C263.589 67.5642 254.221 84.7493 253.026 86.9955C251.49 89.8835 253.906 93.4804 256.657 93.4804C258.562 93.4804 275.266 93.4804 278.111 93.4804C281.412 93.4804 283.833 90.0974 282.292 86.9955C281.75 85.9032 271.51 67.5642 271.51 67.5642V62.867L273.621 60.7674C274.267 60.1379 273.968 59.0781 273.044 59.0781C272.12 59.0781 263.549 59.0781 262.163 59.0781Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+  <div class="navbar-right">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <span class="partner-badge">Coinbase Brazil</span>
+      <span class="partner-sep">×</span>
+      <span class="partner-badge">Alkimi</span>
+    </div>
+    
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-overline"><span class="overline">Campaign Media Plan</span></div>
+    <h1>Programmatic<br><span class="gradient-text">Campaign Proposal</span></h1>
+    <p class="hero-sub">Brazil is one of the fastest-growing crypto markets in the world — and Coinbase is competing for its attention. This proposal positions Coinbase Brazil across the full media funnel: premium CTV for brand presence, 100% Share of Screen in financial press for credibility with mainstream financial audiences, online video for sustained engagement, and crypto-native display to reach active market participants. Every impression is blockchain-verified and delivered within a brand-safe, curated environment.</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="main-content">
+
+  <!-- AI KB SECTION — copy widget, positioned before the budget slider -->
+  <!-- AI KB SECTION -->
+<div style="background:var(--surface-1);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);margin-bottom:var(--space-10);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:start;">
+  <div>
+    <div class="overline" style="margin-bottom:var(--space-4);">AI Knowledge Base</div>
+    <p style="font-size:var(--text-body-sm);color:var(--alkimi-grey-light);line-height:1.7;margin-bottom:var(--space-6);">Copy this knowledge base and paste it into your preferred AI assistant for instant answers about this campaign proposal.</p>
+    <ol style="padding-left:var(--space-6);display:flex;flex-direction:column;gap:var(--space-3);">
+      <li style="font-size:var(--text-body-sm);color:var(--alkimi-grey-light);">Click <strong style="color:var(--alkimi-white);">Copy Knowledge Base</strong></li>
+      <li style="font-size:var(--text-body-sm);color:var(--alkimi-grey-light);">Open your AI assistant</li>
+      <li style="font-size:var(--text-body-sm);color:var(--alkimi-grey-light);">Paste and ask any question</li>
+      <li style="font-size:var(--text-body-sm);color:var(--alkimi-grey-light);">Get instant answers about this proposal</li>
+    </ol>
+    <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-6);">
+      <span style="font-size:var(--text-caption);color:var(--alkimi-grey-mid);padding:4px 12px;border:1px solid var(--color-border);border-radius:var(--radius-full);">ChatGPT</span>
+      <span style="font-size:var(--text-caption);color:var(--alkimi-grey-mid);padding:4px 12px;border:1px solid var(--color-border);border-radius:var(--radius-full);">Claude</span>
+      <span style="font-size:var(--text-caption);color:var(--alkimi-grey-mid);padding:4px 12px;border:1px solid var(--color-border);border-radius:var(--radius-full);">Gemini</span>
+      <span style="font-size:var(--text-caption);color:var(--alkimi-grey-mid);padding:4px 12px;border:1px solid var(--color-border);border-radius:var(--radius-full);">Copilot</span>
+      <span style="font-size:var(--text-caption);color:var(--alkimi-grey-mid);padding:4px 12px;border:1px solid var(--color-border);border-radius:var(--radius-full);">Perplexity</span>
+    </div>
+  </div>
+  <div>
+    <div style="background:var(--surface-2);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);margin-bottom:var(--space-4);">
+      <div style="font-size:var(--text-overline);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--alkimi-grey-mid);margin-bottom:var(--space-3);">Knowledge Base Document</div>
+      <div style="font-size:var(--text-caption);color:var(--alkimi-grey-light);line-height:1.6;">Coinbase Brazil × Alkimi — Campaign Knowledge Base</div>
+      <div style="margin-top:var(--space-4);display:flex;gap:var(--space-2);">
+        <span style="font-size:var(--text-micro);color:var(--alkimi-grey-mid);padding:3px 8px;background:var(--surface-3);border-radius:var(--radius-sm);">Alkimi</span>
+        <span style="font-size:var(--text-micro);color:var(--alkimi-grey-mid);padding:3px 8px;background:var(--surface-3);border-radius:var(--radius-sm);">Strategy</span>
+        <span style="font-size:var(--text-micro);color:var(--alkimi-grey-mid);padding:3px 8px;background:var(--surface-3);border-radius:var(--radius-sm);">Campaign</span>
+      </div>
+    </div>
+    <button onclick="copyKB()" id="kbCopyBtn" style="width:100%;padding:var(--space-4) var(--space-6);background:var(--alkimi-purple);border:none;border-radius:var(--radius-lg);color:#fff;font-family:var(--font-body);font-size:var(--text-body-sm);font-weight:600;cursor:pointer;transition:all 0.2s;letter-spacing:0.02em;">Copy Knowledge Base</button>
+  </div>
+</div>
+<!-- END AI KB SECTION -->
+
+  <!-- BUDGET PANEL -->
+  <div class="budget-panel">
+    <div class="budget-panel-grid">
+      <div>
+        <div class="budget-label">Total Media Budget ($)</div>
+        <div class="budget-input-group">
+          <span class="budget-symbol">$</span>
+          <input type="number" id="budgetInput" value="100000" min="25000" max="250000" step="5000" />
+        </div>
+        <div class="slider-row">
+          <span class="slider-val">$25K</span>
+          <input type="range" id="budgetSlider" min="25000" max="250000" step="5000" value="100000" />
+          <span class="slider-val right">$250K</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Total Impressions</span>
+        <span class="stat-value purple" id="statImpressions">—</span>
+        <span class="stat-sub">Paid + Alkimi added value</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="section-head">
+    <span class="overline">Line Item Breakdown</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- PLAN TOGGLE — only present when secondary lines exist -->
+  <div style="display:flex;gap:8px;margin-bottom:var(--space-6);">
+  <button id="btnPrimary" onclick="setPlan(false)" style="padding:8px 18px;border-radius:100px;border:1.5px solid var(--alkimi-purple);background:var(--alkimi-purple);color:#fff;font-family:var(--font-body);font-size:var(--text-body-sm);font-weight:600;cursor:pointer;transition:all 0.2s;">Brand &amp; Finance</button>
+  <button id="btnFull"    onclick="setPlan(true)"  style="padding:8px 18px;border-radius:100px;border:1.5px solid var(--color-border);background:transparent;color:var(--alkimi-grey-mid);font-family:var(--font-body);font-size:var(--text-body-sm);font-weight:600;cursor:pointer;transition:all 0.2s;">Full Plan <span style="font-weight:400;opacity:0.7;">incl. Crypto</span></button>
+</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Geo</th>
+          <th>Format</th>
+          <th>Targeting / Inventory</th>
+          <th>Buying</th>
+          <th>CPM</th>
+          <th>Viewability</th>
+          <th>VTR</th>
+          <th>CTR</th>
+          <th>Impressions</th>
+          <th>Investment</th>
+        </tr>
+      </thead>
+      <tbody id="planBody"></tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" class="foot-label">Grand Total</td>
+          <td></td>
+          <td id="footEcpm" style="text-align:right;color:var(--alkimi-grey-light);">—</td>
+          <td></td><td></td><td></td>
+          <td class="foot-imp" id="footImpressions">—</td>
+          <td class="foot-cost" id="footCost">—</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section-head">
+    <span class="overline">Plan Summary</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="summary-grid">
+    <div class="sum-card pa">
+      <div class="sum-label">Paid Media Budget</div>
+      <div class="sum-val purple" id="sumPaid">—</div>
+      <div class="sum-sub">Client investment</div>
+    </div>
+    <div class="sum-card ga">
+      <div class="sum-label">Added Value (Alkimi)</div>
+      <div class="sum-val green" id="sumAV">—</div>
+      <div class="sum-sub">Complimentary inventory</div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-label">Blended eCPM</div>
+      <div class="sum-val" id="sumEcpm">—</div>
+      <div class="sum-sub">Across all formats &amp; geos</div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-label">Total Reach</div>
+      <div class="sum-val" id="sumReach">—</div>
+      <div class="sum-sub">Combined impressions delivered</div>
+    </div>
+  </div>
+
+  <!-- GEO -->
+  <div class="section-head">
+    <span class="overline">Geographic Breakdown</span>
+    <div class="section-rule"></div>
+  </div>
+  <div class="geo-grid" id="geoGrid"></div>
+
+  <!-- SITE LIST -->
+  <div class="section-head">
+    <span class="overline">Sample Site List</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <button class="sitelist-toggle" onclick="toggleSiteList()" aria-expanded="false" id="siteListToggle">
+    <div class="sitelist-toggle-left">
+      <div class="sitelist-toggle-icon">↗</div>
+      <div>
+        <div class="sitelist-toggle-label">View Sample Publisher List</div>
+        <div class="sitelist-toggle-sub">CTV · TradFi Brazil · Crypto Global</div>
+      </div>
+    </div>
+    <span class="sitelist-chevron" id="siteListChevron">▼</span>
+  </button>
+
+  <div class="sitelist-body" id="siteListBody">
+    <div class="sitelist-grid">
+      <div class="sitelist-col">
+  <h5>CTV</h5>
+  <ul>
+    <li>Roku</li>
+    <li>Pluto TV</li>
+    <li>Samsung TV+</li>
+    <li>Tubi</li>
+    <li>Paramount+</li>
+    <li>Warner Bros Discovery</li>
+    <li>LG Channels</li>
+    <li>DAZN</li>
+    <li>Bloomberg</li>
+    <li>Disney+</li>
+    <li>Fubo</li>
+  </ul>
+</div>
+<div class="sitelist-col">
+  <h5>TradFi Brazil</h5>
+  <ul>
+    <li style="color:var(--alkimi-grey-mid);font-style:italic;">Curated list available on request &mdash; speak with <a href="mailto:lauren@alkimi.org" style="color:var(--alkimi-purple);">Lauren</a> for the full site list.</li>
+  </ul>
+</div>
+<div class="sitelist-col">
+  <h5>Crypto Global</h5>
+  <ul>
+    <li>CoinDesk</li>
+    <li>The Block</li>
+    <li>CoinTelegraph</li>
+    <li>Be In Crypto</li>
+    <li>CoinGecko</li>
+    <li>CoinMarketCap</li>
+    <li>Etherscan</li>
+    <li>Crypto Briefing</li>
+    <li>Crypto Slate</li>
+    <li>AMB Crypto</li>
+    <li>Dextools</li>
+  </ul>
+</div>
+    </div>
+  </div>
+
+  <!-- AV CALLOUT -->
+  <div class="av-callout">
+    <div class="av-icon">✦</div>
+    <div style="width:100%;">
+      <h4>Alkimi Added Value</h4>
+      <p style="margin-bottom:16px;">Through a partnership with Alkimi, the following pieces of added value will be provided:</p>
+      <div class="av-items">
+        <div class="av-item">
+  <span class="av-item-dot"></span>
+  <div>
+    <span class="av-item-title">CTV Impressions</span>
+    <span class="av-item-desc">Scaling based on budget investment</span>
+  </div>
+</div>
+<div class="av-item">
+  <span class="av-item-dot"></span>
+  <div>
+    <span class="av-item-title">Brand Uplift Study</span>
+    <span class="av-item-desc">Measure campaign impact on brand perception</span>
+  </div>
+</div>
+<div class="av-item">
+  <span class="av-item-dot"></span>
+  <div>
+    <span class="av-item-title">AI Visibility Study</span>
+    <span class="av-item-desc">Measure share of voice within AI query search results</span>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="border-top:1px solid var(--color-border);padding:var(--space-8);max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;">
+  <span style="font-size:var(--text-caption);color:var(--alkimi-grey-mid);">Confidential — for Coinbase Brazil review only. All figures are estimates based on approved campaign parameters.</span>
+  <svg viewBox="68 46 216 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:14px;width:auto;opacity:0.3;">
+    <path d="M83.8615 58.6759C78.5907 58.5085 73.4034 59.9878 69.0608 62.8966L72.2676 68.7C75.3341 66.4522 79.084 65.2623 82.9241 65.3187C88.7704 65.3187 91.6565 68.0525 91.6565 72.7289V73.2325H82.5787C71.9222 73.2325 68 77.693 68 83.4005C68 89.1081 73.057 93.6166 81.074 93.6166C86.3283 93.6166 90.1518 91.9618 92.1005 89.0121V93.1609H99.8462V73.0646C99.8462 63.2323 93.9999 58.6759 83.8861 58.6759H83.8615ZM91.6319 82.5132C90.9055 84.187 89.6588 85.5979 88.0663 86.5483C86.4738 87.4987 84.6154 87.9409 82.7514 87.8131C78.5332 87.8131 76.0417 85.9665 76.0417 83.0168C76.0417 80.6187 77.5465 78.4844 83.1461 78.4844H91.6319V82.4413V82.5132Z" fill="#FFFFFF"/>
+    <path d="M113.711 46H105.497V93.4109H113.711V46Z" fill="#FFFFFF"/>
+    <path d="M145.855 93.7292H155.845L139.811 73.9447L154.464 59.6278H144.597L127.576 74.9519V46H119.361V93.7292H127.576V84.7362L133.693 79.1006L145.855 93.7292Z" fill="#FFFFFF"/>
+    <path d="M167.592 59.3477H159.378V93.473H167.592V59.3477Z" fill="#FFFFFF"/>
+    <path d="M218.253 59.034C215.761 58.9459 213.281 59.412 211.002 60.397C208.724 61.382 206.707 62.8597 205.105 64.7176C203.822 62.8392 202.051 61.324 199.972 60.3258C197.892 59.3277 195.578 58.8819 193.264 59.034C191.102 58.9506 186.958 60.1679C184.97 60.9977 183.197 62.2489 181.769 63.8302V59.4896H173.949V93.591H182.164V76.2765C182.164 69.5138 185.839 66.0605 191.291 66.0605C196.224 66.0605 199.184 69.0102 199.184 75.0774V93.591H207.399V76.2765C207.399 69.5138 211.148 66.0605 216.526 66.0605C221.46 66.0605 224.42 69.0102 224.42 75.0774V93.591H232.634V74.0463C232.634 63.7583 226.714 59.1059 218.253 59.1059" fill="#FFFFFF"/>
+    <path d="M246.093 85.2653V67.2933C246.093 62.7562 242.415 59.0781 237.877 59.0781V93.4804C242.415 93.4804 246.093 89.8024 246.093 85.2653Z" fill="#FFFFFF"/>
+    <path d="M262.163 59.0781C260.952 59.0781 261.062 60.3218 261.503 60.7674C261.985 61.1977 263.589 62.8645 263.589 62.8645L263.589 67.5642C263.589 67.5642 254.221 84.7493 253.026 86.9955C251.49 89.8835 253.906 93.4804 256.657 93.4804C258.562 93.4804 275.266 93.4804 278.111 93.4804C281.412 93.4804 283.833 90.0974 282.292 86.9955C281.75 85.9032 271.51 67.5642 271.51 67.5642V62.867L273.621 60.7674C274.267 60.1379 273.968 59.0781 273.044 59.0781C272.12 59.0781 263.549 59.0781 262.163 59.0781Z" fill="#FFFFFF"/>
+  </svg>
+</footer>
+
+<script>
+// ── KB CONTENT ────────────────────────────────────────────────────────
+const KB_CONTENT = ``# Coinbase Brazil × Alkimi — Knowledge Base
+*Generated: 2026-03-12*
+
+## A. About Alkimi
+
+### What is Alkimi?
+
+Alkimi is a certified B Corporation DSP (Demand-Side Platform) built specifically for the crypto and financial services sector. It is the first and only DSP to run its full auction infrastructure on-chain, using the Sui blockchain, which means every ad impression, bid, and transaction is cryptographically verified and transparent to the advertiser.
+
+Alkimi is headquartered in London and operates globally, with particular strength in the UK, EU, and APAC markets.
+
+### What makes Alkimi different from other DSPs?
+
+There are five core differentiators:
+
+**1. Blockchain-verified transparency.** Because Alkimi's auction logic runs on-chain via Sui, advertisers have verifiable proof that their budgets were spent on real, human inventory. There is no "black box" in the supply chain. Invalid traffic, MFA (made-for-advertising) sites, and impression fraud are structurally removed at the protocol level, not retrospectively filtered.
+
+**2. Crypto-native audience data.** Alkimi maintains the largest global curated marketplace of crypto and financial services inventory. Publishers like CoinDesk, CoinTelegraph, The Block, CoinGecko, CoinMarketCap, and Etherscan are exclusive or preferred supply partners. This is not a general-purpose DSP bolting on a crypto segment -- the platform was built from the ground up for this vertical.
+
+**3. Premium financial press access.** Alkimi has curated 100% Share of Screen positions across leading TradFi publications in the UK, Germany, and France including the Financial Times, Handelsblatt, Suddeutsche Zeitung, Les Echoes, and Le Figaro. These are not standard banner positions -- they are high-impact, brand-safe placements that effectively gate out competitor advertising while a creative is live.
+
+**4. Premium CTV (Connected TV) inventory.** Alkimi operates CTV supply across major AVOD and FAST platforms including Roku, Pluto TV, Samsung TV+, Tubi, Paramount+, Warner Bros Discovery, LG Channels, DAZN, Bloomberg, Disney+, and Fubo. These are non-skippable :15 and :30 second formats with 95%+ viewability.
+
+**5. Certified B Corporation.** Alkimi holds B Corp certification, which means independently verified high standards across environmental impact, governance, and social responsibility. For regulated financial advertisers, this is a meaningful risk management consideration -- you are working with a partner whose practices have been externally audited.
+
+---
+
+## B. The Campaign Proposal
+
+Brazil is one of the fastest-growing crypto markets in the world — and Coinbase is competing for its attention. This proposal positions Coinbase Brazil across the full media funnel: premium CTV for brand presence, 100% Share of Screen in financial press for credibility with mainstream financial audiences, online video for sustained engagement, and crypto-native display to reach active market participants. Every impression is blockchain-verified and delivered within a brand-safe, curated environment.
+
+---
+
+## C. Inventory & Publishers
+
+**CTV:** Roku, Pluto TV, Samsung TV+, Tubi, Paramount+, Warner Bros Discovery, LG Channels, DAZN, Bloomberg, Disney+, Fubo
+
+**TradFi Brazil:** A curated list of premium Brazilian financial press publishers is available on request. Speak with Lauren at lauren@alkimi.org for the full site list.
+
+**Crypto (Global):** CoinDesk, The Block, CoinTelegraph, Be In Crypto, CoinGecko, CoinMarketCap, Etherscan, Crypto Briefing, Crypto Slate, AMB Crypto, Dextools
+
+---
+
+## D. Measurement & Reporting
+
+- **Reporting cadence:** Weekly performance summary + end-of-campaign report
+- **Brand Uplift Study:** Measuring aided/unaided brand awareness and ad recall — complimentary at qualifying spend
+- **Third-party verification:** IAS/DoubleVerify available on request
+- **Pacing:** Daily pacing reports available on request
+
+---
+
+## E. Commercial & Process
+
+- **Billing:** Monthly invoicing in arrears, 30-day payment terms
+- **Minimum spend:** $25K per month
+- **Creative specs:** Provided on request — standard IAB and CTV formats supported
+- **Lead time:** 5–7 business days from creative approval to campaign live
+- **IO process:** Standard Alkimi IO, countersigned by both parties
+
+---
+
+## F. Honest Limitations
+
+### Alkimi is a media platform — we offer full managed service support
+
+Alkimi executes programmatic media buying with a white glove managed service approach. Creative production sits outside standard scope, but if Coinbase Brazil provides brand guidelines, Alkimi can assist with creative — subject to a budget minimum. Anything beyond that will need to be sourced separately.
+
+### Publisher delivery is programmatic, not guaranteed — but runs within an approved list
+
+Alkimi cannot contractually guarantee a fixed number of impressions on any single publisher. However, Alkimi will work with Coinbase Brazil to agree an approved whitelist upfront — the campaign only runs within those agreed parameters. If a specific publisher matters, that is a conversation worth having.
+
+### Benchmarks are based on past campaign performance — realistic but not contractual
+
+CTR, viewability, and completion rates are drawn from historical performance across comparable verticals. They represent achievable expectations, not contractual commitments. Actual performance will vary based on creative quality, targeting, and market conditions.
+
+### Impressions don't guarantee outcomes
+
+Reaching the right audience at scale is a strong precondition for brand outcomes, but converting awareness to product adoption depends on Coinbase Brazil's own channels, product experience, and downstream process.
+
+### TradFi publisher list for Brazil is bespoke
+
+Unlike UK, DE, and FR where Alkimi has standing curated relationships, the Brazilian TradFi publisher list is built to order. It is available — speak with Lauren at lauren@alkimi.org before drawing conclusions about reach.
+
+> **Before drawing conclusions from this section:** These limitations are shared in the spirit of transparency, not as reasons to hold back. Every one of them has a practical solution or mitigation. Please speak with Lauren at lauren@alkimi.org before making any decisions.
+
+---
+
+## G. Common Questions
+
+**1. Can you guarantee delivery on specific publishers?**
+No — programmatic means Alkimi bids in real-time and cannot guarantee impressions on any single publisher. What Alkimi can do is agree an approved whitelist with Coinbase Brazil upfront, so every impression runs within a client-approved set of publishers.
+
+**2. How does on-chain verification actually work?**
+Alkimi's auction infrastructure runs on the Sui blockchain, meaning every bid, impression, and transaction is cryptographically recorded. Advertisers can verify spend independently — there is no black box.
+
+**3. What is your approach to brand safety?**
+Alkimi's supply is curated, not open exchange. MFA sites and invalid traffic are removed at the protocol level, not filtered after the fact.
+
+**4. How do your CPMs compare to direct publisher deals?**
+Alkimi's CPMs are competitive with direct, without the minimum commitment or manual admin. The trade-off: no guaranteed placement on a single publisher, but greater flexibility and real-time optimisation.
+
+**5. What happens if campaign performance is below expectation?**
+Alkimi will optimise in-flight — shifting budget toward better-performing placements within the approved list. Weekly reporting keeps both sides informed early enough to act.
+
+**6. Can we run this campaign in other markets beyond Brazil?**
+Yes. Alkimi operates globally. If Coinbase Brazil wants to extend into other LATAM markets or beyond, the same infrastructure applies — speak with Lauren at lauren@alkimi.org for a multi-geo build.
+
+**7. What creative formats do you support?**
+Standard IAB display, :15 and :30 CTV, OLV, and Alkimi Studio formats. Specs provided on request.
+
+**8. How do we know the impressions are real?**
+On-chain verification means every impression has a cryptographic record. Combined with IAS/DoubleVerify available on request, this is the strongest fraud protection available in programmatic.
+
+---
+
+## H. Case Studies
+
+*To be added. Speak with Lauren at lauren@alkimi.org for relevant case studies from comparable verticals or markets.*
+
+---
+
+*Contact: Lauren, Global Head of Sales, Crypto — lauren@alkimi.org*
+``;
+function copyKB() {
+  const btn = document.getElementById('kbCopyBtn');
+  navigator.clipboard.writeText(KB_CONTENT).then(() => {
+    btn.textContent = '✓ Copied!';
+    btn.style.background = 'var(--alkimi-green-dark)';
+    setTimeout(() => { btn.textContent = 'Copy Knowledge Base'; btn.style.background = 'var(--alkimi-purple)'; }, 2500);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = KB_CONTENT;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = '✓ Copied!';
+    btn.style.background = 'var(--alkimi-green-dark)';
+    setTimeout(() => { btn.textContent = 'Copy Knowledge Base'; btn.style.background = 'var(--alkimi-purple)'; }, 2500);
+  });
+}
+
+// ── DATA ──────────────────────────────────────────────────────────────
+// Each line has a `primary` boolean. true = primary audience/goal; false = secondary.
+const LINES = [
+  {geo:'BR', color:'#4ADE80', fmt:'ctv',    tag:'CTV',    t:'Premium CTV — :15 / :30',                    cpm:15,  view:0.95, vtr:0.95, ctr:null,   r:0.35, primary:true},
+  {geo:'BR', color:'#4ADE80', fmt:'tradfi', tag:'TradFi', t:'100% Share of Screen — Financial Press',      cpm:15,  view:0.95, vtr:0.95, ctr:0.002,  r:0.25, primary:true},
+  {geo:'BR', color:'#4ADE80', fmt:'video',  tag:'OLV',    t:'Online Video — TradFi Branding',              cpm:10,  view:0.95, vtr:0.95, ctr:0.0011, r:0.20, primary:true},
+  {geo:'BR', color:'#4ADE80', fmt:'crypto', tag:'Crypto', t:'Display — Crypto Native',                     cpm:5,   view:0.70, vtr:0.95, ctr:0.0008, r:0.20, primary:false}
+];
+const AV_RATIO = 0.10, AV_CPM = 15;
+
+// ── PLAN TOGGLE ───────────────────────────────────────────────────────
+// If any secondary lines exist, the toggle is rendered and this logic activates.
+const HAS_SECONDARY = LINES.some(l => !l.primary);
+let showFull = false;
+// Primary-only view: rescale r values proportionally so they still sum to 1.
+const PRIMARY_LINES = (() => {
+  const pl = LINES.filter(l => l.primary);
+  const total = pl.reduce((s, l) => s + l.r, 0);
+  return pl.map(l => ({...l, r: l.r / total}));
+})();
+function getActiveLines() {
+  return (!HAS_SECONDARY || showFull) ? LINES : PRIMARY_LINES;
+}
+function setPlan(full) {
+  showFull = full;
+  const on  = 'background:var(--alkimi-purple);border-color:var(--alkimi-purple);color:#fff;';
+  const off = 'background:transparent;border-color:var(--color-border);color:var(--alkimi-grey-mid);';
+  const p = document.getElementById('btnPrimary');
+  const f = document.getElementById('btnFull');
+  if (p) p.setAttribute('style', p.getAttribute('style').replace(/background:[^;]+;border-color:[^;]+;color:[^;]+;/g, '') + (full ? off : on));
+  if (f) f.setAttribute('style', f.getAttribute('style').replace(/background:[^;]+;border-color:[^;]+;color:[^;]+;/g, '') + (full ? on  : off));
+  render(+document.getElementById('budgetSlider').value);
+}
+
+// ── FORMATTERS ────────────────────────────────────────────────────────
+const $f = v => '$' + Math.round(v).toLocaleString('en-US');
+const im = v => Math.round(v).toLocaleString('en-US');
+const pc = v => (v * 100).toFixed(2) + '%';
+const cp = v => '$' + v.toFixed(2);
+
+// ── HELPERS ───────────────────────────────────────────────────────────
+function mkTd(tr, txt, asHTML) {
+  const td = document.createElement('td');
+  if (asHTML) td.innerHTML = txt; else td.textContent = txt;
+  tr.appendChild(td);
+  return td;
+}
+function geoSep(body, label, color) {
+  const sep = document.createElement('tr');
+  sep.className = 'row-geo-sep';
+  const std = document.createElement('td');
+  std.colSpan = 10;
+  std.innerHTML = `<span style="color:${color};display:inline-flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:${color};display:inline-block;"></span>${label}</span>`;
+  sep.appendChild(std);
+  body.appendChild(sep);
+}
+function flash(id, val) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = val;
+  el.classList.remove('flash');
+  void el.offsetWidth;
+  el.classList.add('flash');
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────
+function render(budget) {
+  const body = document.getElementById('planBody');
+  body.innerHTML = '';
+
+  let totImp = 0, totPaid = 0;
+  const gd = {
+    BR: {budget:0, imp:0, color:'#4ADE80'}
+  };
+  let prevGeo = null;
+
+  const activeLines = getActiveLines();
+  activeLines.forEach(l => {
+    const lb = budget * l.r;
+    const li = (lb / l.cpm) * 1000;
+    totPaid += lb;
+    totImp  += li;
+    if (gd[l.geo]) {
+      gd[l.geo].budget += lb;
+      gd[l.geo].imp    += li;
+    }
+
+    if (l.geo !== prevGeo) {
+      geoSep(body, l.geo, l.color);
+      prevGeo = l.geo;
+    }
+
+    const tr = document.createElement('tr');
+    mkTd(tr, '');
+    mkTd(tr, `<span class="tag tag--${l.fmt}">${l.tag}</span>`, true);
+    const tTd = mkTd(tr, l.t);
+    tTd.style.textAlign = 'left';
+    mkTd(tr, 'CPM');
+    mkTd(tr, cp(l.cpm));
+    mkTd(tr, pc(l.view));
+    mkTd(tr, pc(l.vtr));
+    const ctrTd = mkTd(tr, l.ctr ? pc(l.ctr) : 'n/a');
+    if (!l.ctr) ctrTd.style.color = 'var(--alkimi-grey-mid)';
+    mkTd(tr, im(li));
+    // Investment column only — no Budget Level column
+    const invTd = mkTd(tr, $f(lb));
+    invTd.style.color = 'var(--alkimi-purple-light)';
+    invTd.style.fontWeight = '600';
+    body.appendChild(tr);
+  });
+
+  // Added Value row — shown in investment column as stacked $X / "added value"
+  // The AV amount is NOT added to totPaid (client is not charged)
+  geoSep(body, 'ADDED VALUE', 'var(--alkimi-green)');
+  const avVal = budget * AV_RATIO;
+  const avI   = (avVal / AV_CPM) * 1000;
+  totImp += avI;  // AV impressions DO count toward total reach and eCPM denominator
+
+  const avTr = document.createElement('tr');
+  avTr.className = 'row-av';
+  mkTd(avTr, '');
+  mkTd(avTr, '<span class="tag tag--av">Added Value</span>', true);
+  const av1Td = mkTd(avTr, 'Alkimi Added Value — Premium CTV Bonus <span class="av-note">(complimentary)</span>', true);
+  av1Td.style.textAlign = 'left';
+  mkTd(avTr, 'CPM');
+  mkTd(avTr, cp(AV_CPM));
+  mkTd(avTr, pc(0.95));
+  mkTd(avTr, pc(0.95));
+  mkTd(avTr, 'n/a').style.color = 'var(--alkimi-grey-mid)';
+  mkTd(avTr, im(avI)).style.color = 'var(--alkimi-green)';
+  // Investment cell: stacked $X on top, "added value" label below — not charged
+  const avInvTd = mkTd(avTr, '');
+  avInvTd.innerHTML = `<span style="display:block;color:var(--alkimi-green);font-weight:600;">${$f(avVal)}</span><span style="display:block;color:var(--alkimi-grey-mid);font-size:var(--text-caption);margin-top:2px;">added value</span>`;
+  body.appendChild(avTr);
+
+  // Grand total: paid investment only (excludes AV); impressions include AV
+  document.getElementById('footImpressions').textContent = im(totImp);
+  document.getElementById('footCost').textContent = $f(totPaid);
+
+  // Blended eCPM: paid investment ÷ total impressions (incl. AV) — shown under CPM column
+  const blendedEcpm = (totPaid / totImp) * 1000;
+  document.getElementById('footEcpm').innerHTML = `<span style="display:block;font-size:10px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--alkimi-grey-mid);margin-bottom:2px;">eCPM</span><span style="font-family:var(--font-title);font-weight:600;font-size:var(--text-caption);color:var(--alkimi-grey-light);">${cp(blendedEcpm)}</span>`;
+
+  const ecpm = blendedEcpm;
+  flash('statImpressions', im(totImp));
+  flash('sumPaid', $f(totPaid));
+  flash('sumAV', $f(avVal));
+  flash('sumEcpm', cp(ecpm));
+  flash('sumReach', im(totImp));
+
+  const gg = document.getElementById('geoGrid');
+  gg.innerHTML = '';
+  Object.entries(gd).forEach(([geo, d]) => {
+    if (d.budget === 0) return;
+    const pctShare = ((d.budget / totPaid) * 100).toFixed(0);
+    const geoLines = activeLines.filter(l => l.geo === geo);
+    let rowsHtml = `<div class="geo-row"><span class="geo-row-label">Total Investment</span><span class="geo-row-val" style="color:var(--alkimi-purple-light)">${$f(d.budget)}</span></div>`;
+    rowsHtml += `<div class="geo-row"><span class="geo-row-label">Paid Impressions</span><span class="geo-row-val">${im(d.imp)}</span></div>`;
+    geoLines.forEach(l => {
+      rowsHtml += `<div class="geo-row"><span class="geo-row-label">${l.tag}</span><span class="geo-row-val">${$f(budget * l.r)}</span></div>`;
+    });
+    const card = document.createElement('div');
+    card.className = 'geo-card';
+    card.innerHTML = `
+      <div class="geo-card-head">
+        <span class="geo-flag" style="background:${d.color}"></span>
+        <h3>${geo}</h3>
+        <span class="geo-pct">${pctShare}% of budget</span>
+      </div>
+      ${rowsHtml}
+    `;
+    gg.appendChild(card);
+  });
+}
+
+// ── CONTROLS ─────────────────────────────────────────────────────────
+document.getElementById('budgetInput').addEventListener('input', function() {
+  const v = Math.max(25000, Math.min(250000, parseInt(this.value) || 25000));
+  document.getElementById('budgetSlider').value = v;
+  render(v);
+});
+document.getElementById('budgetSlider').addEventListener('input', function() {
+  document.getElementById('budgetInput').value = this.value;
+  render(parseInt(this.value));
+});
+
+render(100000);
+
+function toggleSiteList() {
+  const body    = document.getElementById('siteListBody');
+  const chevron = document.getElementById('siteListChevron');
+  const toggle  = document.getElementById('siteListToggle');
+  const isOpen  = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  chevron.classList.toggle('open', !isOpen);
+  toggle.setAttribute('aria-expanded', String(!isOpen));
+}
+</script>
+</body>
+</html>
